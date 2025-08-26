@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Etiquetas HTML y Elementos de Página</title>
+</head>
+<body>   
+    <header>
+        <h1 style="color: rgb(1, 68, 1);">Etiquetas HTML y Elementos de Página</h1>
+        <hr>
+    
+        <h2 style="color: rgb(2, 111, 2);">Introducción</h2>
+        
+        <p>En el desarrollo web actual, una correcta comprensión de las etiquetas HTML va más allá de su apariencia visual. Es <strong>fundamental</strong> entender su significado y cómo este afecta a la <u>accesibilidad</u> (la capacidad de que todos los usuarios puedan navegar el sitio) y al posicionamiento en buscadores web. La diferencia entre una etiqueta que solo modifica la apariencia y una que aporta un significado específico al contenido es clave. A la par, para herramientas como los lectores de pantalla, o para los algoritmos de Google, esta distinción es esencial para interpretar correctamente la estructura y el propósito de una página.</p>
+
+        <br>
+    </header> 
+
+    <main>
+        <h2 style="color: rgb(2, 111, 2);">Diferencias de Significado y Apariencia en Etiquetas HTML</h2>
+        
+        <p>Dentro de HTML, existen etiquetas diseñadas para organizar el contenido. Es cotidiano encontrar pares de etiquetas que, aunque producen un resultado visual idéntico, poseen en realidad significados y funciones distintas. Comprender esta diferencia es importante para los motores de búsqueda y para la correcta interpretación de una página, ya que un contenido bien estructurado con los significados adecuados es más fácil de indexar y clasificar.</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiquetas &lt;b&gt; vs. &lt;strong&gt;</u></h3>
+        
+        <p>Aunque ambas etiquetas muestran el texto en negrita, su propósito es diferente.</p>
+        
+        <p>La etiqueta <strong>&lt;b&gt;</strong> (de bold) tiene una función solamente de estilo. Su propósito es destacar visualmente una porción del texto para llamar la atención del lector, sin añadirle una mayor importancia. Su uso es comparable a aplicar el formato de negrita en un procesador de textos solo para que algo resalte.</p>
+        
+        <p>En cambio, la etiqueta <strong>&lt;strong&gt;</strong> indica al navegador y a los buscadores que el texto contenido es de <u>gran importancia, seriedad o urgencia</u>. Un lector de pantalla podría, por ejemplo, cambiar su entonación al leer este texto para reflejar dicha importancia. Para Google, el uso de &lt;strong&gt; en palabras clave puede ser una señal de que ese contenido es especialmente relevante para el tema de la página.</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiquetas &lt;i&gt; vs. &lt;em&gt;</u></h3>
+        
+        <p>De forma similar, estas dos etiquetas suelen mostrar el texto en cursiva, pero su intención es distinta.</p>
+        
+        <p>La etiqueta <strong>&lt;i&gt;</strong> (de italic) se utiliza para diferenciar un texto del resto por razones de estilo, como al señalar un término técnico, el título de una obra, una frase en otro idioma o un pensamiento. No implica que el texto tenga un énfasis especial. Por ejemplo: "El término <i>Homo sapiens</i> se refiere a la especie humana".</p>
+        
+        <p>La etiqueta <strong>&lt;em&gt;</strong> (de emphasis o énfasis) se utiliza para aplicar un énfasis que modifica la interpretación de una frase. Como ejemplo, la frase: "Yo <em>nunca</em> me robaría esa dona". El énfasis en "nunca" altera por completo el mensaje, y &lt;em&gt; es la etiqueta adecuada para comunicar esa intención.</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiquetas &lt;s&gt; vs. &lt;del&gt;</u></h3>
+        
+        <p>Ambas etiquetas tachan el texto, pero comunican ideas diferentes.</p>
+        
+        <p>La etiqueta <strong>&lt;s&gt;</strong> (de strikethrough) se usa para marcar información que ya no es correcta o relevante, pero que se mantiene visible por razones de contexto. Un caso de uso común se encuentra en las compras por internet: "Precio: <s>$50.00</s> $25.00". El precio original ya no es válido, pero se muestra para que el usuario perciba el descuento.</p>
+        
+        <p>La etiqueta <strong>&lt;del&gt;</strong> (de delete) se utiliza para indicar que un texto fue eliminado de un documento. Su contraparte es la etiqueta &lt;ins&gt; (de insert), que marca contenido que ha sido añadido. El uso conjunto de estas etiquetas es muy útil para mostrar revisiones en un texto, dejando un registro claro de lo que se ha quitado y lo que se ha agregado.</p>
+
+        <br>
+
+        <h2 style="color: rgb(2, 111, 2);">Elementos de Línea y Elementos de Bloque</h2>
+        
+        <p>En HTML, todas las etiquetas se clasifican en dos categorías principales según su comportamiento en la página: elementos "de línea" y elementos "de bloque". Esta diferencia define cómo se organizan visualmente.</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Elementos de Línea</u></h3>
+        
+        <p>Los elementos de línea (inline) ocupan únicamente el espacio horizontal que su contenido requiere y no inician una nueva línea. Se integran en el flujo normal del texto, permitiendo que otros elementos se coloquen a un lado.</p>
+        
+        <p><strong>Ejemplos de Elementos de Línea:</strong> &lt;a&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;img&gt; (imágenes), &lt;span&gt;.</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Elementos de Bloque</u></h3>
+        
+        <p>Los elementos de bloque (block) funcionan de manera opuesta. Siempre comienzan en una nueva línea y ocupan todo el ancho disponible de su "contenedor". Esto crea una estructura de "cajas" apiladas verticalmente, que son las piezas fundamentales para construir el diseño de una página.</p>
+        
+        <p><strong>Ejemplos de Elementos de Bloque:</strong> &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;-&lt;h6&gt; (todos los títulos), &lt;ul&gt;, &lt;li&gt;.</p>
+
+        <br>
+
+        <h2 style="color: rgb(2, 111, 2);">Formularios y Etiquetas en HTML</h2>
+        
+        <p>Los formularios son la principal herramienta para que los usuarios interactúen y envíen información en una página web. La etiqueta <strong>&lt;form&gt;</strong> actúa como el contenedor que agrupa todos los controles (campos, botones, etc.) y gestiona el envío de los datos a un servidor. Este proceso se configura con sus atributos <u>action</u> (la URL a la que se envían los datos) y <u>method</u> (el método de envío, como GET o POST).</p>
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiqueta &lt;input&gt; y su Propiedad type</u></h3>                  
+        
+        <p>Su función cambia por completo según el valor de su atributo <strong>type</strong>.</p>                  
+        
+        <p>Ejemplos son:</p>         
+        <ul>             
+            <li><strong>type="text":</strong> Un campo de texto de una sola línea para datos generales.</li>             
+            <li><strong>type="password":</strong> Similar al de texto, pero los caracteres se ocultan por seguridad.</li>             
+            <li><strong>type="submit":</strong> Un botón que, al ser presionado, envía los datos del formulario.</li>             
+            <li><strong>type="checkbox":</strong> Una casilla de verificación que permite al usuario seleccionar una o varias opciones.</li>             
+            <li><strong>type="radio":</strong> Un botón de opción. En un grupo con el mismo nombre, solo se puede seleccionar uno.</li>             
+            <li><strong>type="date":</strong> Muestra una interfaz de calendario para seleccionar una fecha.</li>             
+            <li><strong>type="file":</strong> Permite al usuario seleccionar un archivo de su dispositivo para cargarlo.</li>         
+        </ul>          
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiqueta &lt;label&gt;</u></h3>                  
+        
+        <p>La etiqueta es fundamental para la "usabilidad" y accesibilidad de los formularios. Asocia un texto descriptivo a un campo del formulario a través del atributo <u>for</u>. Esto ofrece dos ventajas:</p>                  
+        
+        <ul>             
+            <li><strong>Accesibilidad:</strong> Un lector de pantalla leerá el texto de la etiqueta cuando el usuario enfoque el campo, indicando qué información se debe introducir.</li>             
+            <li><strong>Usabilidad:</strong> Permite a los usuarios hacer clic en el texto de la etiqueta para activar el campo asociado, lo que facilita la interacción, especialmente en dispositivos móviles.</li>         
+        </ul> 
+        
+        <p>Por ejemplo, si un formulario solicita el nombre del usuario, se coloca una etiqueta que diga “Nombre completo” y al lado el campo para escribirlo. Así, al dar clic en el texto de la etiqueta, automáticamente se activa el campo para escribir.</p>       
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiqueta &lt;output&gt;</u></h3>                  
+        
+        <p>Esta etiqueta se utiliza para mostrar el resultado de un cálculo o una acción del usuario dentro del formulario. Su propósito es indicar que su contenido es un <u>resultado generado</u> por la página.</p>  
+        <p>Un ejemplo común es cuando se tienen dos campos para introducir números y automáticamente aparece el resultado de su suma en la pantalla, sin necesidad de que el usuario escriba nada en esa parte.</p>        
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiqueta &lt;progress&gt;</u></h3>                  
+        
+        <p>Muestra una barra que representa visualmente el progreso de una tarea. Utiliza dos atributos principales: <strong>max</strong>, que define el valor total (por ejemplo, 100), y <strong>value</strong>, que indica el estado actual del progreso.</p>   
+        <p>Un ejemplo típico es cuando se carga un archivo: la barra se va llenando poco a poco y el usuario puede ver que, por ejemplo, el 70% ya se ha completado.</p>       
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiquetas &lt;select&gt; y &lt;option&gt;</u></h3>                  
+        
+        <p>La etiqueta crea un menú desplegable. Dentro de ella, cada etiqueta &lt;option&gt; define una de las opciones de la lista. El atributo <u>value</u> de cada &lt;option&gt; contiene el dato que se enviará al servidor, mientras que el texto visible para el lector es el que se encuentra dentro de la etiqueta.</p>   
+        <p>Por ejemplo, en un formulario de inscripción al ITAM, se puede mostrar un menú con carreras como “Ingeniería en Sistemas”, “Ciencia de Datos” o “Economía”, donde el estudiante selecciona solo una de ellas.</p>       
+
+        <h3 style="color: rgb(81, 14, 14);"><u>Etiqueta &lt;textarea&gt;</u></h3>                  
+        
+        <p>A diferencia de &lt;input type="text"&gt;, esta etiqueta crea un campo de texto de múltiples líneas. Es ideal para que los usuarios introduzcan comentarios, mensajes o cualquier texto de mayor longitud. Su tamaño inicial se puede definir con los atributos <u>rows</u> (filas) y <u>cols</u> (columnas).</p>     
+        <p>Un ejemplo es cuando un sitio web pide “Comentarios adicionales” o “Escribe tu opinión”, y se despliega un cuadro amplio en el que se pueden redactar párrafos completos en lugar de solo una línea.</p>          
+
+        <br>
+    </main>
+
+    <footer>
+        <hr>
+        
+        <h4 style="color: gray; text-decoration: underline;">Referencias</h4>
+
+        <ol>
+            <li>W3C (2021). <i>HTML 5.2 Specification</i>. "Introduction". World Wide Web Consortium. Obtenido de <a href="https://www.w3.org/TR/2021/SPSD-html52-20210128/">https://www.w3.org/TR/2021/SPSD-html52-20210128/</a></li>
+            <li>MDN Web Docs (2023). "HTML elements reference". Mozilla Corporation.  Obtenido de <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements">https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements</a></li>
+            <li>MDN Web Docs (2023). "Block-level content". Mozilla Corporation. Obtenido de <a href="https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content">https://developer.mozilla.org/en-US/docs/Glossary/Block-level_content</a></li>
+            <li>MDN Web Docs (2023). "Inline-level content". Mozilla Corporation. Obtenido de <a href="https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content">https://developer.mozilla.org/en-US/docs/Glossary/Inline-level_content</a></li>
+        </ol>
+
+        <hr>
+
+        <br>
+        
+        <p style="background-color: rgb(0, 0, 0); color: white;">Emiliano S. Millán Giffard | Introducción al Desarrollo Web</p>
+    </footer>
+</body>
+</html>
