@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Brady - Vida y Obra</title>
+    <style>
+        /* Estilos para etiquetas */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333333;
+        }
+
+        h1 {
+            color: #002244;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #c8102e;
+            border-bottom: 2px solid #002244;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #002244;
+            text-decoration: underline;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #444444;
+        }
+
+        /* Estilo con ID */
+        #destacado {
+            background-color: #ffd700;
+            border: 3px dashed #002244;
+            padding: 15px;
+            margin: 20px 0;
+            margin-bottom: auto;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos con clases */
+        .navegacion {
+            background-color: #002244;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-principal {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-principal li {
+            margin: 0 15px;
+        }
+
+        .enlace-nav {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 2px solid transparent;
+        }
+
+        .enlace-nav:hover {
+            color: #001a81;
+            background-color: #988d8d;
+            border: 2px solid #001a81;
+        }
+
+        .encabezado {
+            background-color: #c8102e;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .contenedor {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .seccion-principal {
+            background-color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tarjeta-logro {
+            background-color: #f8f9fa;
+            border: 2px dotted #002244;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
+        .lista-equipos {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-left: 5px solid #c8102e;
+        }
+
+        .imagen-brady {
+            max-width: 22%;
+            height: auto;
+            border: 3px solid #002244;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 10px auto;
+            display: block;
+        }
+
+        .imagen-quitar {
+            display: block;
+            margin: 20px auto;
+        }
+
+        .formulario-contacto {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border: 2px solid #002244;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .campo-formulario {
+            margin-bottom: 15px;
+        }
+
+        .etiqueta {
+            display: block;
+            color: #002244;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .entrada {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .boton-enviar {
+            background-color: #002244;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .boton-enviar:hover {
+            background-color: #c8102e;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .pie-pagina {
+            background-color: #002244;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .estadistica {
+            display: inline-block;
+            background-color: #002244;
+            color: white;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+        }
+
+        .articulo-biografia {
+            background-color: #fafafa;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Requerimientos Media-Width */
+        @media (max-width: 700px) {
+            .encabezado {
+                background-color: #4a90e2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .imagen-quitar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 300px) {
+            .encabezado {
+                background-color: #27ae60;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Tom Brady: La Leyenda del Football Americano</h1>
+        <p><strong>El quarterback más exitoso en la historia de la NFL</strong></p>
+    </header>
+
+    <nav class="navegacion">
+        <ul class="menu-principal">
+            <li><a href="#biografia" class="enlace-nav">Biografía</a></li>
+            <li><a href="#carrera" class="enlace-nav">Carrera</a></li>
+            <li><a href="#logros" class="enlace-nav">Logros</a></li>
+            <li><a href="#estadisticas" class="enlace-nav">Estadísticas</a></li>
+            <li><a href="https://www.nfl.com/players/tom-brady/" target="_blank" class="enlace-nav">Perfil Oficial de NFL</a></li>
+        </ul>
+    </nav>
+
+    <main class="contenedor">
+        <section id="biografia" class="seccion-principal">
+            <h2>Biografía</h2>
+            <article class="articulo-biografia">
+                <h3>Primeros Años</h3>
+                <p>Thomas Edward Patrick Brady Jr. nació el <strong>3 de agosto de 1977</strong> en San Mateo, California. Desde joven mostró un talento excepcional para el deporte, especialmente en el football americano.</p>
+                <p>Creció en una familia deportista, siendo el menor de cuatro hermanos. Su pasión por el football comenzó cuando asistía a los juegos de los San Francisco 49ers con su familia.</p>                
+            </article>
+
+            <article class="articulo-biografia">
+                <h3>Universidad de Michigan</h3>
+                <p>Brady jugó football universitario en la Universidad de Michigan desde 1995 hasta 1999. Durante sus años en Michigan, demostró su capacidad de liderazgo y determinación.</p>
+                <p>A pesar de no ser titular indiscutible al inicio, trabajó arduamente para ganarse el puesto y llevar a su equipo a victorias importantes, incluyendo el Orange Bowl de 2000.</p>
+                <img src="https://www.freep.com/gcdn/media/2016/06/06/DetroitFreePress/DetroitFreePress/636008084855856544-UM-081498-BRADY-DPG.JPG?width=1012&height=1268&fit=crop&format=pjpg&auto=webp" alt="Tom Brady en sus años de juventud, vistiendo el uniforme de Michigan" class="imagen-brady"/>            
+            </article>
+        </section>
+
+        <section id="carrera" class="seccion-principal">
+            <h2>Carrera Profesional</h2>
+            <div class="lista-equipos">
+                <h3>Equipos en la NFL</h3>
+                <ol>
+                    <li>New England Patriots (2000-2019)</li>
+                    <li>Tampa Bay Buccaneers (2020-2022)</li>
+                </ol>
+            </div>
+
+            <div id="destacado">
+                <p><strong>¡20 años con los Patriots y 3 años con los Buccaneers!</strong></p>
+                <p>23 temporadas de excelencia en la NFL, 7 anillos de Super Bowl</p>
+            </div>
+
+            <article>
+                <h3>Era de los Patriots</h3>
+                <p>Seleccionado en la ronda 6, pick 199 del Draft de 2000, Brady se convirtió en el quarterback titular de los Patriots en 2001.</p>
+                <p>Durante sus 20 temporadas con los Patriots, ganó seis Super Bowls y estableció numerosos récords de la franquicia y de la liga.</p>
+                <img src="https://images.daznservices.com/di/library/DAZN_News/dd/f5/new-england-patriots-2004-tom-brady_hxox5cy2k05i1ot8f2kcxg2kx.jpg?t=1790985439" alt="Tom Brady celebrando una victoria con el uniforme de los New England Patriots" class="imagen-brady imagen-quitar">
+            </article>
+
+            <article>
+                <h3>Tampa Bay Buccaneers</h3>
+                <p>En 2020, Brady firmó con los Tampa Bay Buccaneers, donde continuó su legado ganando su séptimo Super Bowl en su primera temporada con el equipo.</p>
+                <p>Se retiró oficialmente el 1 de febrero de 2023, después de 23 temporadas extraordinarias en la NFL.</p>
+            </article>
+        </section>
+
+        <section id="logros" class="seccion-principal">
+            <h2>Logros y Reconocimientos</h2>
+            <div class="tarjeta-logro">
+                <h3>Super Bowls</h3>
+                <ul>
+                    <li>XXXVI (2002) - Patriots vs Rams</li>
+                    <li>XXXVIII (2004) - Patriots vs Panthers</li>
+                    <li>XXXIX (2005) - Patriots vs Eagles</li>
+                    <li>XLIX (2015) - Patriots vs Seahawks</li>
+                    <li>LI (2017) - Patriots vs Falcons</li>
+                    <li>LIII (2019) - Patriots vs Rams</li>
+                    <li>LV (2021) - Buccaneers vs Chiefs</li>
+                </ul>
+            </div>
+
+            <div class="tarjeta-logro">
+                <h3>Premios MVP</h3>
+                <ul>
+                    <li>5 veces MVP del Super Bowl</li>
+                    <li>3 veces MVP de la NFL</li>
+                    <li>15 veces Pro Bowl</li>
+                    <li>6 veces All-Pro</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="estadisticas" class="seccion-principal">
+            <h2>Estadísticas de Carrera</h2>
+            <img src="https://tecolotito.elsiglodetorreon.com.mx/i/2018/01/1024249.jpeg" alt="Tom Brady lanzando un pase" class="imagen-brady">
+            
+            <div class="tarjeta-logro">
+                <h3>Números Destacados</h3>
+                <p>Pases completos: <span class="estadistica">7,753</span></p>
+                <p>Yardas por pase: <span class="estadistica">89,214</span></p>
+                <p>Touchdowns por pase: <span class="estadistica">649</span></p>
+                <p>Victorias en temporada regular: <span class="estadistica">251</span></p>
+                <p>Victorias en playoffs: <span class="estadistica">35</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <div>
+            <p>2025 - Información de <a href="http://www.espn.com.mx/especial/_/id/9510312/la-leyenda-de-tom-brady-en-tres-actos" target="_blank" style="color: #b04c4c;">ESPN</a></p>
+        </div>
+    </footer>
+</body>
+</html>
