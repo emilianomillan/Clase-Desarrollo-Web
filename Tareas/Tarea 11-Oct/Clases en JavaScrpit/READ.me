@@ -1,0 +1,98 @@
+Las clases fueron introducidas en JavaScript con la ES6 en 2015, marcando un cambio en la forma de trabajar con objetos. Antes de esta actualización, toda la programación orientada a objetos se realizaba mediante "prototipos", un sistema que funcionaba correctamente pero cuya sintaxis resultaba poco clara.
+
+Es importante destacar que las clases en JavaScript son "azúcar sintáctica" sobre el sistema de prototipos existente, internamente sigue operando con prototipos, pero las clases proporcionan la misma funcionalidad con una estructura más clara y organizada.
+
+
+¿Qué es una clase?
+
+Una clase es una estructura que funciona como plantilla para crear objetos. Se puede conceptualizar como un tipo  de molde: define la estructura y comportamiento que tendrán los objetos creados a partir de ella, pero no es el objeto en sí. De esta manera, se establece una vez cómo debe ser algo y, de ahí, se pueden crear múltiples instancias basadas en esa definición.
+
+Las clases agrupan datos y funcionalidad en una misma entidad, lo cual contribuye a la organización del código, pues en lugar de mantener variables y funciones dispersas, todos los elementos relacionados quedan encapsulados en una estructura coherente.
+
+
+
+Componentes de una clase
+
+Constructor
+Es un método especial que se ejecuta automáticamente al instanciar un objeto. Su función principal es inicializar las propiedades del objeto, estableciendo sus valores iniciales. Únicamente puede existir un constructor por clase.
+
+Dentro del constructor se utiliza la palabra reservada `this` para hacer referencia al objeto que se está creando. Cada vez que se escribe "this.propiedad", se está definiendo una propiedad para esa instancia específica del objeto.
+
+
+Propiedades
+Las variables asociadas a cada instancia de la clase. Representan el estado o la información que almacena el objeto. Generalmente se definen dentro del constructor, aunque también es posible declararlas directamente en el cuerpo de la clase.
+
+Las propiedades pueden ser públicas (accesibles desde cualquier parte del código) o privadas (accesibles únicamente dentro de la clase). Para declarar una propiedad como privada se utiliza el símbolo "#" como prefijo en su nombre.
+
+
+Métodos
+Los métodos son funciones asociadas a la clase que definen las acciones que pueden realizar los objetos. Establecen el comportamiento del objeto y permiten que interactúe con sus propios datos o con otros objetos del sistema.
+
+Los métodos tienen acceso a las propiedades del objeto mediante "this", lo que les permite consultar y modificar el estado interno del objeto según sea necesario.
+
+
+Creación de instancias
+Para crear un objeto a partir de una clase se emplea el operador `new` seguido del nombre de la clase y los argumentos requeridos por el constructor (la "instanciación").
+
+Durante la instanciación, JavaScript:
+1. Crea un objeto vacío en memoria
+2. Ejecuta el constructor de la clase con los parámetros proporcionados
+3. Retorna el objeto completamente inicializado
+
+Cada instancia creada es independiente y mantiene su propio conjunto de valores para las propiedades, aunque todas comparten los métodos definidos en la clase.
+
+
+Métodos estáticos
+Los métodos estáticos pertenecen a la clase en su conjunto, no a instancias individuales. 
+
+Se definen utilizando la palabra clave "static" y se invocan directamente sobre la clase, sin necesidad de crear una instancia.
+
+Resultan útiles para implementar funcionalidades que tienen relación con la clase pero que no requieren acceder al estado de un objeto particular. 
+
+
+Getters y Setters
+Métodos que permiten controlar el acceso y modificación de propiedades. 
+
+Un getter se ejecuta al leer una propiedad, un setter se ejecuta al asignarle un valor.
+
+Esta característica funciona para:
+- Validar datos antes de asignarlos a una propiedad
+- Calcular valores de forma dinámica
+- Mantener propiedades computadas o derivadas
+- Implementar lógica adicional durante el acceso o modificación de datos
+
+
+Herencia
+Mecanismo que permite crear nuevas clases basadas en clases existentes. La clase derivada (o subclase) hereda todas las propiedades y métodos de la clase base, pudiendo además agregar nuevas características o modificar las heredadas.
+
+La herencia se implementa mediante la palabra clave "extends". En el constructor de la clase derivada es necesario invocar "super()" antes de utilizar `this`, lo cual ejecuta el constructor de la clase padre.
+
+Este mecanismo permite crear jerarquías de clases que modelan relaciones del tipo "es un" presentes en el dominio del problema, favoreciendo la reutilización de código y la organización lógica del sistema.
+
+
+Encapsulación
+La encapsulación consiste en ocultar los detalles de implementación interna y exponer únicamente la interfaz necesaria.
+
+Se implementan entonces campos privados mediante el prefijo "#". Estos campos son accesibles exclusivamente dentro de la clase.
+
+
+
+Uso
+
+Las clases son una opción adecuada en las siguientes situaciones:
+- Creación de múltiples objetos con estructura similar
+- Modelado de entidades del dominio con estado y comportamiento
+- Organización de código relacionado en unidades cohesivas
+- Implementación de jerarquías mediante herencia
+- Desarrollo de aplicaciones de gran escala que requieren estructura sólida
+
+
+
+Diferencias con otros lenguajes
+
+En comparación con Java o C++, algunas diferencias relevantes son que:
+- Las clases de JavaScript son dinámicas y permiten agregar propiedades en tiempo de ejecución
+- No existen interfaces formales en JavaScript puro
+- No se dispone de la sobrecarga de métodos tradicional
+- La visibilidad es pública por defecto (excepto para miembros con `#`)
+- Solo se admite herencia simple, no múltiple
