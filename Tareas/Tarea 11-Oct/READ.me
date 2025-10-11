@@ -19,6 +19,31 @@ Además:
 
 
 
+Estructura
+
+sessionStorage implementa una estructura de almacenamiento basada en el modelo clave-valor, similar a un diccionario o mapa hash. Se basa en un objeto Storage que mantiene pares de datos donde:
+
+- Clave (key): Es una cadena de texto que actúa como identificador único para cada elemento almacenado (no pueden existir dos claves idénticas en el mismo sessionStorage)
+- Valor (value): Es el dato asociado a cada clave, el cual debe ser necesariamente una cadena de texto (string). 
+
+Cada elemento es independiente y se accede directamente mediante su clave. Por tanto, no se debe confiar en el orden de inserción para recuperar datos de manera secuencial.
+
+ 
+
+Propiedades
+
+Posee propiedades específicas que permiten interactuar con el contenido almacenado y obtener información sobre el estado del almacenamiento.
+
+- Propiedad length
+Propiedad de solo lectura que devuelve un número entero representando la cantidad total de elementos actualmente almacenados en sessionStorage. 
+                                                                                                                                                                                              
+- Método key(índice)
+Aunque técnicamente es un método y no una propiedad, key() funciona como un acceso indexado al almacenamiento. =ecuencial, aunque como se mencionó anteriormente, el orden no es predecible ni consistente. 
+
+Es la única manera de obtener todas las claves almacenadas sin conocerlas de antemano, lo que resulta fundamental para operaciones que necesitan procesar o listar todo el contenido del sessionStorage.
+
+
+
 Métodos principales
 
 sessionStorage proporciona cuatro métodos principales para manipular datos:
@@ -70,3 +95,12 @@ Ideal para:
 - Información que solo debe existir durante la sesión actual
 - Carritos de compra temporales
 - Estado de pestañas independientes
+
+
+
+Requerimientos
+
+- Navegador compatible con HTML5 (disponible desde 2015 en todos los navegadores modernos)
+- JavaScript habilitado en el navegador
+- Mismo origen (dominio) para acceder a los datos
+- Límite de almacenamiento: aproximadamente 5-10 MB por dominio (varía según el navegador)
