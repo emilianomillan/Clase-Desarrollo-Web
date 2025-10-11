@@ -1,0 +1,106 @@
+¿Qué es sessionStorage?
+
+sessionStorage es una propiedad que permite acceder a un objeto Storage asociado a la sesión actual del navegador. 
+
+Es una API de almacenamiento web en HTML5 que guarda datos de forma local en el navegador, pero con la característica particular de que la información almacenada en sessionStorage es eliminada al finalizar la sesión de la página.
+
+
+
+Características principales
+
+Al igual que localStorage, sessionStorage trabaja con un sistema de clave-valor donde:
+- Solo admite strings (cadenas de texto)
+- Para almacenar objetos o arrays se debe usar JSON.stringify()
+
+Además:
+- *La sesión de la página perdura mientras el navegador se encuentra abierto, y se mantiene por sobre las recargas y reaperturas de la página. Sin embargo, abrir una página en una nueva pestaña o ventana iniciará una nueva sesión, lo que significa que cada pestaña tiene su propio sessionStorage independiente.*
+- La información se guarda de forma aislada por dominio.
+- Los datos no tienen fecha de caducidad mientras la sesión esté activa. Solo se eliminan cuando se cierra la pestaña o el navegador.
+
+
+
+Estructura
+
+sessionStorage implementa una estructura de almacenamiento basada en el modelo clave-valor, similar a un diccionario o mapa hash. Se basa en un objeto Storage que mantiene pares de datos donde:
+
+- Clave (key): Es una cadena de texto que actúa como identificador único para cada elemento almacenado (no pueden existir dos claves idénticas en el mismo sessionStorage)
+- Valor (value): Es el dato asociado a cada clave, el cual debe ser necesariamente una cadena de texto (string). 
+
+Cada elemento es independiente y se accede directamente mediante su clave. Por tanto, no se debe confiar en el orden de inserción para recuperar datos de manera secuencial.
+
+ 
+
+Propiedades
+
+Posee propiedades específicas que permiten interactuar con el contenido almacenado y obtener información sobre el estado del almacenamiento.
+
+- Propiedad length
+Propiedad de solo lectura que devuelve un número entero representando la cantidad total de elementos actualmente almacenados en sessionStorage. 
+                                                                                                                                                                                              
+- Método key(índice)
+Aunque técnicamente es un método, key() funciona como un acceso indexado al almacenamiento. =ecuencial, aunque como se mencionó anteriormente, el orden no es predecible ni consistente. 
+
+Es la única manera de obtener todas las claves almacenadas sin conocerlas de antemano, lo que resulta fundamental para operaciones que necesitan procesar o listar todo el contenido del sessionStorage.
+
+
+
+Métodos principales
+
+sessionStorage proporciona cuatro métodos principales para manipular datos:
+
+1. sessionStorage.setItem(clave, valor)
+- Guarda un par clave-valor en el almacenamiento de sesión.
+
+2. sessionStorage.getItem(clave)
+- Recupera el valor asociado a una clave específica.
+
+3. sessionStorage.removeItem(clave)
+- Elimina un elemento específico del almacenamiento usando su clave.
+
+4. sessionStorage.clear()
+- Elimina todos los elementos almacenados en sessionStorage.
+
+
+
+Diferencias entre localStorage y sessionStorage
+
+Persistencia
+- localStorage: Los datos permanecen indefinidamente hasta que se eliminen manualmente
+- sessionStorage: Los datos se eliminan al cerrar la pestaña o navegador
+
+Alcance/Paso por ventanas
+- localStorage: Compartido entre todas las pestañas y ventanas del mismo dominio
+- sessionStorage: Independiente por cada pestaña/ventana
+
+Uso común
+- localStorage: Preferencias de usuario, configuraciones, datos que deben persistir
+- sessionStorage: Datos temporales de formularios, estado de la sesión, información transitoria
+
+Sincronización
+- localStorage: No se sincroniza entre dispositivos
+- sessionStorage: No se sincroniza entre dispositivos
+
+Duración
+- localStorage: Sin fecha de caducidad
+- sessionStorage: Hasta que finaliza la sesión
+
+
+
+Uso
+
+Ideal para:
+- Guardar información temporal de formularios multipaso
+- Almacenar el estado de una aplicación durante la navegación
+- Datos de autenticación temporales (no sensibles)
+- Información que solo debe existir durante la sesión actual
+- Carritos de compra temporales
+- Estado de pestañas independientes
+
+
+
+Requerimientos
+
+- Navegador compatible con HTML5 (disponible desde 2015 en todos los navegadores modernos)
+- JavaScript habilitado en el navegador
+- Mismo origen (dominio) para acceder a los datos
+- Límite de almacenamiento: aproximadamente 5-10 MB por dominio (varía según el navegador)
