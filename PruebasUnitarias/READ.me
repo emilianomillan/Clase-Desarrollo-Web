@@ -1,0 +1,33 @@
+Casos usados con el expect (en jest)
+
+##1- .toEqual(valor)
+Es usado para comparar objetos o arreglos.
+  - La diferencia principal con ".toBe()" es que revisa el contenido (las propiedades y valores). Si hay dos objetos distintos pero con la misma información, la prueba pasa.
+
+
+##2- .toBeTruthy() y .toBeFalsy()
+Sirven para evaluar valores en un booleano (como un if), no necesariamente si son true o false explícitamente.
+
+  - .toBeTruthy(): Pasa con cualquier cosa que JavaScript considere verdadera: números, string/texto, objetos, arreglos).
+  - .toBeFalsy(): Pasa con los valores que JavaScript considera falsos: 0, false, null, undefined, string vacío y NaN.
+
+
+##3- .toBeNull() y .toBeUndefined()
+Validaciones estrictas para cuando se necesita asegurar que una variable está vacía por una razón específica.
+
+  - .toBeNull(): Solo pasa si el valor es explícitamente null.
+  - .toBeUndefined(): Solo pasa si el valor es undefined (por ejemplo, variables declaradas sin asignar valor o propiedades que no existen).
+
+
+##4- .toThrow()
+Sirve para verificar que una función lance un error cuando algo sale mal. 
+  - Nota: Es importante meter la función que puede/va a fallar dentro de otra función, si no, el error detiene la prueba antes de que Jest pueda detectarlo.
+  - Reemplaza el uso de try-catch en los tests. 
+
+
+##5- .toStrictEqual()
+Compara objetos sin ignorar las propiedades que son undefined. Si un objeto tiene una clave undefined y el otro no la tiene, marcaría error. 
+  - También revisa que los objetos sean del mismo tipo.
+  - Es una versión más estricta de .toEqual(). 
+expect(a).toEqual(b); // Pasa
+expect(a).toStrictEqual(b); // Falla (porque 'a' tiene una propiedad 'y' extra)
